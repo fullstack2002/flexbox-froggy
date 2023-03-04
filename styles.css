@@ -93,15 +93,19 @@ button {
   overflow: hidden;
   min-width: 300px;
   min-height: 300px;
+  max-width: 100vh;
+  max-height: 100vh;
 }
 
-.forefront {
+#forefront {
   position: absolute;
+  z-index: 1;
   left: 0;
   top: 0;
   width: 95%;
   height: 95%;
   padding: 2.5%;
+  display: flex;
 }
 
 .background {
@@ -111,4 +115,44 @@ button {
   width: 95%;
   height: 95%;
   padding: 2.5%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.lily-container, .frog-container {
+  width: 20%;
+  height: 20%;
+}
+
+.lily, .frog {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.lily.green {
+  background-image: url(./images/lilypad-green.svg);
+}
+
+.lily.red {
+  background-image: url(./images/lilypad-red.svg);
+}
+
+.lily.yellow {
+  background-image: url(./images/lilypad-yellow.svg);
+}
+
+.frog.green {
+  background-image: url(./images/frog-green.svg);
+}
+
+.frog.red {
+  background-image: url(./images/frog-red.svg);
+}
+
+.frog.yellow {
+  background-image: url(./images/frog-yellow.svg);
 }
